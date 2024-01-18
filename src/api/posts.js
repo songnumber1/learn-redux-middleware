@@ -1,15 +1,14 @@
 import axios from "axios";
 
 export const getPosts = async () => {
-  const response = await axios.get("http://localhost:4000/posts");
+  const response = await axios.get("/posts");
   return response.data;
 };
 
 export const getPostById = async (id) => {
-  const response = await axios.get(`http://localhost:4000/posts/${id}`);
+  const response = await axios.get(`/posts/${id}`);
   return response.data;
 };
-
 // const sleep = (n) => new Promise((resolve) => setTimeout(resolve, n));
 
 // // 가짜 포스트 목록 데이터
